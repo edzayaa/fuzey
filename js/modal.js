@@ -4,7 +4,7 @@ $('.button').click(function(){
   $('body').addClass('modal-active');
 })
 
-$('#modal-container').click(function(){
+$('#modal-close').click(function(){
   $(this).addClass('out');
   $('body').removeClass('modal-active');
 });

@@ -56,7 +56,7 @@ body {
 .card{
   list-style: none;
   position: relative;
-  height: 195px;
+  height: 130px;
 }
 
 .card:before{
@@ -1557,6 +1557,8 @@ body {
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
+
+  text-align: left;
 }
 .line-title::before,
 .line-title::after {
@@ -1888,9 +1890,12 @@ body .footer .content > div .image {
 }
 
 /*** Filters ***/
-
+.details-filters {
+  display: flex;
+  gap: 20px;
+}
 .selectMultiple {
-  width: 240px;
+  width: 100%;
   position: relative;
 }
 .selectMultiple select {
@@ -2377,12 +2382,12 @@ html.modal-active, body.modal-active {
 #modal-container .modal-background .modal {
   background: white;
   width: 75%;
-  height: 70%;
+  height: 85%;
   display: inline-block;
   border-radius: 25px;
   font-weight: 300;
   position: relative;
-  padding: 30px;
+  padding: 50px;
 }
 #modal-container .modal-background .modal h2 {
   font-size: 25px;
