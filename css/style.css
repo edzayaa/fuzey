@@ -2078,7 +2078,7 @@ body .footer .content > div .image {
   background: 0;
   outline: none;
   transition: color 0.1s ease;
-  width: 200px !important;
+  width: 100vh !important;
 }
 .search form span {
   display: none;
