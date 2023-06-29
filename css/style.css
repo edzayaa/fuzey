@@ -59,10 +59,10 @@ body {
   height: 100%;
 }
 .card-design-type {
-  height: 200px;
+  height: 195px;
 }
 .card-normal {
-  height: 135px;
+  height: 130px;
 }
 .card:before{
   content: '';
@@ -454,6 +454,17 @@ body {
   border-radius: 5px;
   justify-content: center;
   background-color: rgba(255, 214, 10, 1);
+}
+.btn-promoted {
+  display: flex;
+  padding: 7px;
+  overflow: hidden;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 5px;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid red;
 }
 .btn-filter {
   width: 100px;
@@ -2118,7 +2129,7 @@ body .footer .content > div .image {
 .search ul {
   overflow: hidden;
   margin: 0;
-  padding: 30px;
+  padding: 20px 30px 0px;
   list-style: none;
   position: absolute;
   left: 0;
@@ -2135,6 +2146,7 @@ body .footer .content > div .image {
   border-radius: 25px;
 
   width: 100%;
+  height: 92vh;
 }
 .search ul  {
   margin: 0 0 20px 0;
@@ -2212,6 +2224,11 @@ body .footer .content > div .image {
   transition: transform 0.4s ease 0s;
 }
 
+.banner-container {
+  background-color: #FFD60A;
+  border-radius: 20px;
+  padding: 20px;
+}
 /******** Slider ***************/
 
 /*----------------------------*\
@@ -2225,7 +2242,7 @@ body .footer .content > div .image {
   margin: 15px 0px;
   transition: 0.2s all;
   border-radius: 25px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 18px 0px;
 }
 
 .product .product-img {
@@ -2235,8 +2252,9 @@ body .footer .content > div .image {
 }
 
 .product .product-img>img {
-  margin-top: 10%;
-  width: 80%;
+  margin-top: 20%;
+  width: 50%;
+  margin-bottom: 5%;
 }
 
 .product .product-img .product-label {
@@ -2296,8 +2314,18 @@ body .footer .content > div .image {
 .product .product-body .product-price {
   color: #B9B9B9;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
+.customer-img {
+  width: 30px;
+}
+.customer-name {
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+}
 .product .product-body .product-price .product-old-price {
   font-size: 70%;
   font-weight: 400;

@@ -38,7 +38,7 @@ $(document).ready(function() {
                     bar.animate({
                         width: (self.outerWidth() - 32)
                     }, 800, function() {
-                        var searchW = ((list.outerWidth() + 550) > (550 + bar.outerWidth())) ? (list.outerWidth() + 550) : 550 + bar.outerWidth();
+                        var searchW = ((list.outerWidth() + 200) > (200 + bar.outerWidth())) ? (list.outerWidth() + 200) : 200 + bar.outerWidth();
                         self.animate({
                             width: searchW
                         }, 400);
