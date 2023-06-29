@@ -196,6 +196,7 @@ body {
   position: fixed;
   flex-shrink: 1;
   background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px -1px rgba(18, 22, 33, 0.3);
   align-items: center;
   z-index: 999;
 }
@@ -437,6 +438,16 @@ body {
   width: 165px;
   display: flex;
   padding: 20px;
+  overflow: hidden;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 5px;
+  justify-content: center;
+  background-color: rgba(255, 214, 10, 1);
+}
+.btn-buy {
+  display: flex;
+  padding: 10px;
   overflow: hidden;
   align-items: center;
   flex-shrink: 0;
@@ -772,8 +783,8 @@ body {
   background-color: rgba(255, 214, 10, 1);
 }
 .page-cartoutline2 {
-  width: 22px;
-  height: 22px;
+  width: 15px;
+  height: 15px;
 }
 .page-text33 {
   color: rgba(0, 0, 0, 1);
@@ -1943,13 +1954,12 @@ body .footer .content > div .image {
 /** Search **/
 
 .search {
-  background: #fff;
+  background: #E4E4E4;
   padding: 12px 16px 12px 48px;
   position: relative;
   display: table;
   margin: auto;
   border-radius: 25px;
-  box-shadow: 0 4px 16px -1px rgba(18, 22, 33, 0.3);
   transition: background 0.1s ease, transform 0.1s ease, padding 0.5s ease 0.1s;
 }
 .search .bar {
@@ -2010,7 +2020,7 @@ body .footer .content > div .image {
   border-radius: 50%;
 }
 .search .bar .icon:before {
-  background: #fff;
+  background: #E4E4E4;
   left: 4px;
   top: 4px;
   right: 4px;
@@ -2068,6 +2078,7 @@ body .footer .content > div .image {
   background: 0;
   outline: none;
   transition: color 0.1s ease;
+  width: 200px !important;
 }
 .search form span {
   display: none;
@@ -2206,7 +2217,9 @@ body .footer .content > div .image {
 /*----------------------------*\
   product
 \*----------------------------*/
-
+.slick-dots {
+  display: none !important;
+}
 .product {
   position: relative;
   margin: 15px 0px;
@@ -2257,6 +2270,7 @@ body .footer .content > div .image {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .product .product-body .product-category {
@@ -2280,14 +2294,14 @@ body .footer .content > div .image {
 }
 
 .product .product-body .product-price {
-  color: #3169af;
+  color: #B9B9B9;
   font-size: 18px;
 }
 
 .product .product-body .product-price .product-old-price {
   font-size: 70%;
   font-weight: 400;
-  color: #8D99AE;
+  color: #B9B9B9;
 }
 
 .product .product-body .product-rating {
@@ -2459,51 +2473,30 @@ body .footer .content > div .image {
   font-size: 14px;
 }
 
-/********* Colors ********/
-
 /******** Header **********/
 .header{
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: flex-start;
-  height: 50vw;
-  min-height: 400px;
-  max-height: 550px;
-  min-width: 300px;
+  height: 100%;
+  width: 100%;
   color: #fff;
-}
-.header:after{
-  content:"";
-  width:100%;
-  height:100%;
-  position:absolute;
-  bottom:0;
-  left:0;
-  z-index:-1;
- background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
 }
 .header:before{
   content:"";
   width:100%;
-  height:100%;
+  height: 123%;
   position:absolute;
   top:20%;
   left:0;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0); backface-visibility: hidden;
-  scale(1.0, 1.0);
-    transform: translateZ(0);
   background:#1B2030 url('../media/Hero.png') 50% 0 no-repeat;
   background-size:100%;
-  background-attachment:fixed;
-  animation: grow 360s  linear 10ms infinite;
-  transition:all 0.4s ease-in-out;
   z-index:-2
 }
+
 .info{
   width:100%;
   padding: 17% 10% 0 10%;
@@ -2513,7 +2506,57 @@ body .footer .content > div .image {
 .yellow-text {
   color: #FFD60A !important;
 }
-@keyframes grow{
-  0% { transform: scale(1) translateY(0px)}
-  50% { transform: scale(1.2) translateY(-400px)}
+
+/************ Colors ***************/
+
+.colorsSelector {
+  text-align: left;
+}
+.colorsSelectorProduct {
+  text-align: center;
+  margin: 15px;
+}
+.colorItem {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #999;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.colorItem--active {
+    box-shadow: 0px 0px 0px 5px #fe9b07;
+}
+
+.colorBlue {
+    background-color: #5192E3;
+}
+.colorYellow {
+  background-color: #F8D745;
+}
+.colorWhite {
+    background-color: #cfcfcf;
+}
+.colorRed {
+    background-color: #c64040;
+}
+
+.colorBlack {
+    background-color: #08090b;
+}
+
+.colorPurple {
+    background-color: #D2B6FF;
+}
+.colorTinto {
+  background-color: #D8476A;
+}
+.colorOrange {
+    background-color: #d87c5a;
+}
+
+.colorGraphite {
+    background-color: #7f7f7f;
 }
